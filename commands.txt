@@ -1,0 +1,49 @@
+# 1. Navigate to the project root
+cd "D:\CB\umy\Autonomous Firewall Rule Intelligence System\source code\autofw_ai_Firewall"
+cd "D:\CB\umy\Autonomous Firewall Rule Intelligence System\source code1\source code\autofw_ai_Firewall"
+
+# 2. Activate the environment
+.\venv\Scripts\activate
+
+# 3. Enter the backend folder where the scripts live
+cd backend
+
+# 4. Generate data and Train (This fixes the 'monotonic_cst' error)
+python dataset_generator.py
+python train_model.py
+
+# 5. Go back to root to run the main module
+cd ..
+
+2. The "Daily Execution" Command
+
+cd "D:\CB\umy\Autonomous Firewall Rule Intelligence System\source code\autofw_ai_Firewall"
+
+
+python -m backend.live_firewall
+
+3. The "Dashboard" Command (New Terminal)
+
+cd "D:\CB\umy\Autonomous Firewall Rule Intelligence System\source code\autofw_ai_Firewall"
+.\venv\Scripts\activate
+cd dashboard
+streamlit run streamlit_app.py
+
+before running the backend and frontend codes we need to delete the log file or not
+del .\firewall_logs.db
+
+Dynamic commands
+1.
+cd "D:\CB\umy\Autonomous Firewall Rule Intelligence System\source code1\source code\autofw_ai_Firewall"
+2.
+.\venv\Scripts\activate
+3.
+python -m backend.live_firewall
+
+
+vs code
+cd "D:\CB\umy\Autonomous Firewall Rule Intelligence System"
+ & ".venv\Scripts\Activate.ps1"        
+cd "D:\CB\umy\Autonomous Firewall Rule Intelligence System\source code1\source code\autofw_ai_Firewall"
+cd dashboard
+streamlit run streamlit_app.py
