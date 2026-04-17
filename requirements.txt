@@ -1,0 +1,7 @@
+scapy
+pandas
+scikit-learn
+joblib
+streamlit
+numpy
+ipaddress
